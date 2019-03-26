@@ -1,0 +1,35 @@
+{
+    "name": "shaggyrec/insteadsite",
+    "description": "Instead site application for adv",
+    "type": "project",
+    "require": {
+        "slim/slim": "^3.12",
+        "doctrine/dbal": "^2.9",
+        "slim/php-view": "^2.2"
+    },
+    "authors": [
+        {
+            "name": "Alexander Shogenov",
+            "email": "i@shagg.ru"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "InsteadSite\\": "src"
+        },
+        "files": [
+            "src/functions/http.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "InsteadSite\\Test\\": "tests/lib"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public"
+    }
+}
